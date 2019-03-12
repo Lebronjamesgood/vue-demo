@@ -1,6 +1,7 @@
 import HelloWorld from '../components/HelloWorld.vue'
 import login from '../module/login/login.vue'
 import logout from '../module/login/logout.vue'
+import readerInformationModify from '../module/readerInformation/readerInformationModify.vue'
 
 export default[
     {
@@ -23,5 +24,10 @@ export default[
     	path:'/logout',
     	name:"logout",
     	component:logout
+    },{
+    	path:'/readerInformationModify',
+    	name:'readerInformationModify',
+    	component:readerInformationModify
     }
+
   ]

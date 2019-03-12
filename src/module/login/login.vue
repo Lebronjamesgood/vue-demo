@@ -29,7 +29,7 @@
           if(validateUsername && validatePassword){
               if(this.username == "admin" && this.password == "123"){
                   this.$store.dispatch("login",this.username.trim(),"12345")
-                  this.$router.push({path:"/logout"})
+                  this.$router.push({path:"/readerInformationModify"})
               }else{
                 alert("请输入正确的用户名或密码！")
               } 
