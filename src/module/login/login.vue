@@ -29,7 +29,7 @@
           if(validateUsername && validatePassword){
               if(this.username == "admin" && this.password == "123"){
                   this.$store.dispatch("login",this.username.trim(),"12345")
-                  this.$router.push({path:"/readerInformationModify"})
+                  this.$router.push({path:"/homePage"})
               }else{
                 alert("请输入正确的用户名或密码！")
               } 
@@ -50,7 +50,6 @@
 <style lang="scss">
 html,body{
   width:100%;
-  height:100%;
   /*background: url(../../build/beijin.jpg) no-repeat;*/
   background-size: 100% 100%;
   }
