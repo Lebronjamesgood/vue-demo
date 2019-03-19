@@ -13,10 +13,10 @@ export default[
       	requireAuth:true
       }
     },
-    /*{
+    {
     	path:"*",
-    	component : p404
-    },*/
+    	component : login
+    },
     {
     	path:'/login',
     	name:"login",
@@ -37,6 +37,12 @@ export default[
     },{
       path:"/homePage",
       component:resolve =>require(['../module/bookInformation/homePage.vue'],resolve)
+    },{
+      path:"/book",
+      component:resolve =>require(['../module/commom/book.vue'],resolve)
+    },{
+      path:"/bookType",
+      component:resolve =>require(['../module/bookInformation/bookType.vue'],resolve)
     }
 
 

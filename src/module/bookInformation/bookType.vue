@@ -1,0 +1,81 @@
+import bookInformation from '../../module/common/briefBookInformation.vue'
+<template>
+	<div id="bookType">
+		<div>
+			<el-input
+			    placeholder="请输入信息查询"
+			    prefix-icon="el-icon-search"
+			    v-model="inputBook"
+			    :fetch-suggestions="querySearchAsync"
+			    @select="handleSelect">
+			  </el-input>
+		</div>
+		<div>
+			<h2>借阅排行</h2>
+			<div>
+				<div v-for="item in books" :key="item">
+					<book-information 
+						:bookName="item.bookName"
+						:bookAuthor="item.bookAuthor"
+						:bookRate="item.bookRate"
+						@click="toBookInformation(item.id)">
+					</book-information>
+				</div>
+			</div>
+		</div>
+		<div>
+			<h2>全馆收藏</h2>
+			<div>
+				<div v-for="item in books" :key="item">
+					<book-information 
+						:bookName="item.bookName"
+						:bookAuthor="item.bookAuthor"
+						:bookRate="item.bookRate"
+						@click="toBookInformation(item.id)">
+					</book-information>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+<script>
+	
+	export default{
+		data(){
+			return{
+				inputBook:"",
+				books:[
+					{	
+						bookId:'1',
+						bookName:'javaScript',
+						bookAuthor:'xxx',
+						bookRate:3.3
+					},
+					{
+						bookId:'2',
+						bookName:'javaScript',
+						bookAuthor:'xxx',
+						bookRate:3.3
+					},
+					{
+						bookId:'3',
+						bookName:'javaScript',
+						bookAuthor:'xxx',
+						bookRate:3.3
+					}
+				]
+			}
+		},
+		methods:{
+			toBookInformation(){
+				this.$router.push({path:"/book"})
+			}
+		},
+		components:{
+			'book-information':bookInformation
+		}
+	}
+</script>
+<style>
+	
+</style>

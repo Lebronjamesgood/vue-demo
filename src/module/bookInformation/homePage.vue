@@ -1,8 +1,8 @@
 <template>
 <div id="homePage">
   <el-carousel :interval="4000" type="card" height="400px">
-    <el-carousel-item v-for="item in system" :key="item">
-      <h3>{{ item.name }}</h3>
+    <el-carousel-item v-for="(item,i) in system" :key="i">
+      <h3 @click="changePage(i)">{{ item.name }}</h3>
     </el-carousel-item>
   </el-carousel>
 </div> 
@@ -23,10 +23,22 @@
 		methods:{
 			changePage(index){
         console.log(index)
-				switch(index){
-		          case 3: this.$router.push({path:"/readerInformationModify"})
-		        }
-			}
+				this.sleepFun(2000,index)
+			},
+      async sleepFun(ms,i){
+        await this.sleep(ms)
+        switch(i){
+          case 0: this.$router.push({path:"/bookType"});break;
+          case 1: this.$router.push({path:"/bookType"});break;
+          case 2: this.$router.push({path:"/bookType"});break;
+          case 3: this.$router.push({path:"/readerInformationModify"});break;
+        }
+      },
+      sleep(ms){
+        return new Promise(resolve=>{
+          setTimeout(resolve,ms)
+        })
+      }
 		}
 	}
 </script>
