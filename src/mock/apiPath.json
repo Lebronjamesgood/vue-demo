@@ -1,0 +1,9 @@
+{
+	"user": {
+		"getCookie": "/api/getCookie",
+		"getUserInfo": "/api/getUserInfo",
+		"getReaderById": "/api/getReaderById",
+		"getFavouritebook": "/api/getFavouritebook",
+		"getAllBook":"/api/getAllBook"
+	}
+}

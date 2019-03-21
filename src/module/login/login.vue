@@ -1,6 +1,6 @@
 <template>
 <div class="Land">
-    <div class="topzi">图书管理后台登陆</div>
+    <div class="topzi">图书管理系统</div>
           <div class="">
               <span>name：</span>
               <el-input v-model="username"></el-input>

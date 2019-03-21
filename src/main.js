@@ -7,6 +7,13 @@ import routes from './router/index'
 import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css';
 import store from './vuex/store'
+import axios from 'axios'
+import {get,post,patch,put} from './util/http'
+require('./mock/userMock.js')
+Vue.prototype.$post=post;
+Vue.prototype.$fetch=get;
+Vue.prototype.$patch=patch;
+Vue.prototype.$put=put;
 Vue.use(Element)
 Vue.use(VueRouter)
 Vue.config.productionTip = false

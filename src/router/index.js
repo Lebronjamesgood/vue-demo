@@ -39,7 +39,7 @@ export default[
       component:resolve =>require(['../module/bookInformation/homePage.vue'],resolve)
     },{
       path:"/book",
-      component:resolve =>require(['../module/commom/book.vue'],resolve)
+      component:resolve =>require(['../module/common/book.vue'],resolve)
     },{
       path:"/bookType",
       component:resolve =>require(['../module/bookInformation/bookType.vue'],resolve)
